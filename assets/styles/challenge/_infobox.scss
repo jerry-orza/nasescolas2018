@@ -1,0 +1,45 @@
+.challenge-infobox {
+  // position: relative;
+  width: 100%;
+  margin-top: rem(30);
+  padding-bottom: rem(36);
+  // overflow: hidden;
+
+  &__container {
+    margin-right: rem(-10);
+    margin-left: rem(-10);
+
+    @include mq(sm) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__description {
+    flex: 0 1 rem(376);
+    padding-right: rem(10);
+    padding-left: rem(10);
+    color: $prussian-blue;
+  }
+
+  &__title {
+    margin-bottom: rem(10);
+    font-size: em(16, 10);
+    font-weight: bold;
+    letter-spacing: .05em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-size: em(14, 10);
+    line-height: 1.2857142857142858;
+    overflow: hidden;
+  }
+
+  &__item {
+    flex-grow: 1;
+    padding-right: rem(10);
+    padding-left: rem(10);
+  }
+}

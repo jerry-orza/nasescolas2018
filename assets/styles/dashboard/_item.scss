@@ -1,0 +1,51 @@
+.dashboard-item {
+  margin-top: rem(12);
+
+  @include mq(sm) {
+    margin-top: 0;
+  }
+
+  &__label {
+    color: $blue-whale;
+    font-family: $font-opensans;
+    font-size: em(12);
+    font-weight: 600;
+    letter-spacing: .01em;
+    line-height: 1;
+    text-transform: uppercase;
+
+    @include mq(sm) {
+      font-size: em(16);
+    }
+  }
+
+  &__score {
+    display: block;
+    padding-top: rem(4);
+    color: $bondi-blue;
+    font-size: em(13);
+    font-weight: 600;
+    letter-spacing: -.01em;
+    line-height: 1.3333333;
+    text-transform: uppercase;
+
+    @include mq(sm) {
+      padding-top: rem(12);
+      font-size: em(18);
+    }
+
+    strong {
+      display: inline-block;
+      font-size: em(35, 13);
+      font-weight: 700;
+      letter-spacing: .01em;
+      line-height: 1;
+      vertical-align: middle;
+
+      @include mq(sm) {
+        margin-right: rem(5);
+        font-size: em(47, 18);
+      }
+    }
+  }
+}

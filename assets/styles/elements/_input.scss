@@ -1,0 +1,91 @@
+.el-input {
+  @include appearance(none);
+  position: relative;
+  width: 100%;
+  height: rem(44);
+  padding: 0 rem(22);
+  transition: all .1s;
+  border: 1px solid transparent;
+  border-radius: rem(22);
+  background: #fff;
+  color: inherit;
+  font-size: em(14, 10);
+  line-height: 1;
+
+  &--default {
+    border-color: #acacac;
+  }
+
+  &--dark {
+    background: $geyser;
+  }
+
+  &--honey {
+    background: $honey-flower;
+
+    &::placeholder {
+      color: rgba(#fff, .5);
+    }
+  }
+
+  &--fun {
+    background: $fun-blue;
+  }
+
+  &--tory {
+    background: $tory-blue;
+    color: #fff;
+
+    &::placeholder {
+      color: rgba(#fff, .5);
+    }
+  }
+
+  &--crete {
+    background: $crete;
+  }
+
+  &--purple {
+    background: $dark-purple-heart;
+  }
+
+  &--eucalyptus {
+    background: $eucalyptus;
+  }
+
+  &--siren {
+    background: $siren;
+  }
+
+  &--jam {
+    background: $jazzberry-jam;
+  }
+
+  &--gold {
+    background: $old-gold;
+  }
+
+  &--eminence {
+    background: #582181;
+  }
+
+  &:focus {
+    border: 1px solid darken($lemon-chiffon, 50%);
+    outline: none;
+    background: $lemon-chiffon;
+    color: #333;
+    box-shadow: 0 0 4px 2px rgba($lemon-chiffon, .25);
+    z-index: 2;
+  }
+
+  @at-root {
+    textarea#{&} {
+      height: auto;
+      min-height: rem(112);
+      padding-top: rem(22);
+      padding-bottom: rem(22);
+      border-radius: 0;
+      resize: vertical;
+    }
+  }
+}

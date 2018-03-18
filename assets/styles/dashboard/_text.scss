@@ -1,0 +1,71 @@
+.dashboard-text {
+  margin-top: rem(18);
+  color: $blue-whale;
+  font-size: em(16);
+  line-height: 1.4;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include mq(md) {
+    margin-top: rem(24);
+    margin-bottom: rem(24);
+    font-size: em(20);
+  }
+
+  &.is--horizontal {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    width: 100%;
+    margin-top: rem(54);
+    text-align: left;
+
+    @include mq(xs) {
+      margin-top: rem(24);
+      font-size: em(12);
+    }
+
+    .dashboard-text__large {
+      padding-right: rem(8);
+      padding-left: rem(8);
+
+      @include mq(xs) {
+        font-size: em(52, 12)
+      }
+
+      @include mq(md) {
+        padding-right: rem(16);
+        padding-left: rem(16);
+      }
+    }
+  }
+
+  &__icon {
+    flex: 0 0 rem(58);
+
+    @include mq(md) {
+      flex-basis: rem(90);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__large {
+    display: block;
+    font-size: em(72, 16);
+    font-weight: 700;
+    line-height: 1;
+
+    @include mq(md) {
+      font-size: em(93, 20);
+    }
+  }
+
+  &__medium {
+    font-size: em(43, 20);
+    letter-spacing: -0.03em;
+  }
+}

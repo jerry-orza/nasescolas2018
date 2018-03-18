@@ -1,0 +1,68 @@
+.has-modal--open {
+  overflow: hidden;
+}
+
+.cp-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  // padding: rem(10);
+  transition: opacity .5s;
+  // background: rgba($blue-whale, .8);
+  opacity: 0;
+  z-index: -1;
+
+  .has-modal--open & {
+    opacity: 1;
+    z-index: 1050;
+  }
+
+  .has-modal--transitioning & {
+    opacity: 0;
+    z-index: 1050;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($blue-whale, .8);
+    z-index: 2;
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: rem(875);
+    max-width: calc(100% - #{rem(68)});
+    max-height: 80vh;
+    transform: translate(-50%, -50%);
+    // box-shadow: rem(2) rem(2) rem(4) rgba($greyish-brown, .675);
+    overflow: visible;
+    z-index: 3;
+  }
+
+  &__close {
+    @include appearance(none);
+    display: block;
+    position: absolute;
+    top: rem(-24);
+    right: rem(-24);
+    width: rem(48);
+    height: rem(48);
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cpath fill-rule='evenodd' fill='%23003951' d='M19.997 14.848c-.421-2.275-2.973-3.579-4.43-5.259 1.624-1.126 2.677-2.813 4.047-4.216.172-.17.177-.452 0-.625-.969-.933-1.727-2.073-2.596-3.09-.498-.59-1.367-1.65-2.259-1.656-2.218-.017-3.827 2.658-5.037 4.343C8.464 3.21 7.163-.018 5.344.359 4.556.52 3.73.97 2.965 1.537c-.089 0-.183.026-.272.098-.505.389-.969.826-1.297 1.325-.278.302-.531.602-.739.892-.129.09-.21.257-.115.438.005.02.016.032.025.052.046.85 1.169 2.002 1.57 2.543.469.622.97 1.221 1.472 1.815.21.247.436.573.706.803C2.913 11.404 1.4 13.224.06 15.174c-.134.196-.03.452.157.57 1.904 1.224 3.453 2.868 5.286 4.179.145.106.426.075.538-.066 1.397-1.755 2.717-3.618 4.423-5.101 1.632 1.287 3.54 2.834 4.283 4.735.132.334.507.443.793.204 1.159-.985 2.118-2.16 3.284-3.139.522-.438 1.32-.91 1.173-1.708z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    text-indent: -999px;
+    overflow: hidden;
+    z-index: 4;
+  }
+}

@@ -1,0 +1,68 @@
+.challenge-dots {
+  position: absolute;
+  top: 50%;
+  right: -100%;
+  width: rem(18);
+  margin: 0;
+  padding: 0;
+  transform: translate(-100%, -50%);
+  list-style: none;
+  z-index: 2;
+  user-select: none;
+
+  &.is--bondi {
+    color: $bondi-blue;
+  }
+
+  &.is--cerulean {
+    color: $cerulean;
+  }
+
+  &.is--sienna {
+    color: $burnt-sienna;
+  }
+
+  &.is--sunflower {
+    color: $sunflower;
+  }
+
+  &.is--tory {
+    color: $tory-blue;
+  }
+
+  &.is--gray {
+    color: $scorpion;
+  }
+
+  &.is--turbo {
+    color: $turbo;
+  }
+
+  &.is--tulip {
+    color: $tulip-tree;
+  }
+
+  &.is--heliotrope {
+    color: $heliotrope;
+  }
+
+  li {
+    display: block;
+    width: rem(18);
+    height: rem(18);
+    border-radius: 50%;
+    background: currentColor;
+    transition: opacity .4s;
+    opacity: .3;
+    overflow: hidden;
+    text-indent: rem(-18);
+
+    &.is--active {
+      opacity: 1;
+    }
+
+    + li {
+      margin-top: rem(18);
+    }
+  }
+}

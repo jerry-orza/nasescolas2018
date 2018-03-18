@@ -1,0 +1,25 @@
+.challenge-tabs {
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+
+  .el-tabs {
+    background: #00a6b4;
+    color: #fff;
+
+    &__container {
+      margin-bottom: 0;
+    }
+
+    &__btn {
+      @include mq(sm) {
+        padding-top: rem(20);
+        padding-bottom: rem(20);
+      }
+
+      &.active {
+        color: #042838;
+      }
+    }
+  }
+}

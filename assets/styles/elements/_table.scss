@@ -1,0 +1,119 @@
+.el-table {
+  position: relative;
+
+  &__header {
+    background: $blue-whale;
+    color: #fff;
+    align-content: center;
+    display: none;
+
+    @include mq(sm) {
+      display: flex;
+    }
+  }
+
+  &__th {
+    flex-grow: 1;
+    flex-shrink: 1;
+    text-align: center;
+    font-family: $font-amatic;
+    font-size: em(26, 10);
+    line-height: 1;
+    padding: rem(10);
+
+    &:first-child {
+      text-align: left;
+    }
+
+    &:empty {
+      flex: 0 0 rem(40);
+    }
+  }
+
+  &__group {
+    margin-top: .5rem;
+  }
+
+  &__row {
+    background: $bondi-blue;
+  }
+
+  &__wrapper {
+
+    align-items: center;
+    max-width: rem(1024);
+    width: 100%;
+    margin: 0 auto;
+
+    @include mq(sm) {
+      display: flex;
+      padding-left: rem(15);
+      padding-right: rem(15);
+    }
+  }
+
+  &__td {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: rem(5) rem(10);
+    color: #fff;
+    font-size: em(14, 10);
+    line-height: 1.8571428571428572;
+    min-width: 100%;
+
+    span {
+      flex-grow: 1;
+    }
+
+    &:before {
+      content: attr(data-header);
+      display: block;
+      width: 50%;
+
+      @include mq(sm) {
+        display: none;
+      }
+    }
+
+
+    @include mq(sm) {
+      display: block;
+      min-width: 0;
+      text-align: center;
+    }
+  }
+
+  &__edit {
+    justify-content: space-between;
+    @include mq(sm) {
+      order: 2;
+      flex: 0 0 rem(40);
+
+      + .el-table__td {
+        text-align: left;
+      }
+    }
+  }
+
+  &__panel {
+    display: none;
+  }
+
+  &__toggle {
+    @include appearance(none);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    color: #fff;
+
+    svg {
+      width: rem(24);
+      min-height: rem(36);
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.dashboard-container {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+
+  &.is--top {
+    align-items: flex-start;
+  }
+
+  &.has--pad {
+    margin-top: rem(24);
+  }
+}
+
+.dashboard-group {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+
+@import '../dashboard/grid';
+@import '../dashboard/header';
+@import '../dashboard/chart';
+@import '../dashboard/text';
+@import '../dashboard/item';
+@import '../dashboard/footer';

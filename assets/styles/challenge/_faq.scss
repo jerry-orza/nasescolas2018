@@ -1,0 +1,46 @@
+.challenge-faq {
+  counter-reset: faq;
+
+  &--turbo {
+    dt {
+      color: $turbo;
+    }
+  }
+
+  &--tulip {
+    dt {
+      color: $tulip-tree;
+    }
+  }
+
+  &--green {
+    dt {
+      color: $pastel-green;
+    }
+  }
+
+  dt {
+    display: block;
+    margin-bottom: rem(8);
+    font-family: $font-opensans;
+    font-weight: 700;
+    font-size: em(18);
+    line-height: 1.22222;
+    text-transform: uppercase;
+
+    &:before {
+      counter-increment: faq;
+      content: counter(faq) ". ";
+    }
+  }
+
+  dd {
+    display: block;
+    margin-bottom: rem(32);
+    font-size: em(15);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

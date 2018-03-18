@@ -1,0 +1,105 @@
+.challenge-video {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: rem(428);
+  margin-bottom: rem(32);
+  border: 3px solid currentColor;
+  background-image: url(../images/textura_bg_video.png);
+  background-position: 50% 50%;
+  color: #fff;
+  overflow: hidden;
+
+  &:hover {
+    color: #fff;
+  }
+
+  &.has--prussian {
+    color: $prussian-blue;
+
+    &:hover {
+      color: $prussian-blue;
+    }
+  }
+
+  &.is--tory {
+    background-color: $tory-blue;
+  }
+
+  &.is--bondi {
+    background-color: $bondi-blue;
+  }
+
+  &.is--kelp {
+    background-color: $green-kelp;
+  }
+
+  &.is--sienna {
+    background-color: $burnt-sienna;
+  }
+
+  &.is--sunflower {
+    background-color: $sunflower;
+  }
+
+  &.is--tulip {
+    background-color: $tulip-tree;
+  }
+
+  &.is--gray {
+    background-color: $scorpion;
+  }
+
+  &.is--heliotrope {
+    background-color: $heliotrope;
+  }
+
+  &:before {
+    display: block;
+    padding-top: 56.25%;
+    content: "";
+  }
+
+  &__icon {
+    display: block;
+    position: absolute;
+    top: calc(50% - #{rem(17)});
+    left: calc(50% - #{rem(15)});
+    width: rem(30);
+    height: rem(34);
+    animation-duration: 1s;
+    animation-fill-mode: both;
+
+    .challenge-video:hover & {
+      animation-name: wobble;
+    }
+  }
+
+  &__embed {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: rem(875);
+    margin: 0;
+    overflow: hidden;
+
+    &:before {
+      display: block;
+      padding-top: 56.25%;
+      content: "";
+    }
+
+    embed,
+    iframe,
+    object,
+    video {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  }
+}

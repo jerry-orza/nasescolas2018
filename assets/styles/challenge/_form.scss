@@ -1,0 +1,116 @@
+.challenge-form {
+  padding-right: 0;
+  padding-left: 0;
+
+  &__group {
+    + #{&} {
+      margin-top: rem(32);
+    }
+
+    &.is--atoll {
+      padding: rem(16);
+      border: 3px solid $atoll;
+      @include mq(md) {
+        padding: rem(32);
+      }
+    }
+
+    &.is--tulip {
+      padding: rem(16);
+      border: 3px solid $tulip-tree;
+      @include mq(md) {
+        padding: rem(32);
+      }
+    }
+
+    &.is--sienna {
+      padding: rem(16);
+      border: 3px solid $burnt-sienna;
+      @include mq(md) {
+        padding: rem(32);
+      }
+    }
+
+    &.is--scorpion {
+      padding: rem(16);
+      border: 3px solid $scorpion;
+      @include mq(md) {
+        padding: rem(32);
+      }
+    }
+
+    &.is--tory {
+      padding: rem(16);
+      border: 3px solid $tory-blue;
+      @include mq(md) {
+        padding: rem(32);
+      }
+    }
+
+    &.is--thumb {
+      padding: rem(16);
+      border: 3px solid $tom-thumb;
+      @include mq(md) {
+        padding: rem(32);
+      }
+    }
+
+    .cp-dupe,
+    .cp-dupe__container {
+      border-color: inherit;
+    }
+  }
+
+  &__fieldset {
+    display: flex;
+    flex-basis: 100%;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    margin-right: rem(-10);
+    margin-bottom: rem(24);
+    margin-left: rem(-10);
+
+    &:only-child {
+      margin-bottom: 0;
+    }
+
+    .challenge-body__subtitle + & {
+      margin-top: rem(-24);
+    }
+
+    .cp-dupe & + & {
+      border-top: 1px dashed transparent;
+      border-top-color: inherit;
+    }
+  }
+
+  &__legend {
+    display: block;
+    flex-basis: 100%;
+    flex-shrink: 0;
+    margin-bottom: rem(6);
+    font-size: em(15);
+    font-weight: 700;
+    line-height: 1.466666;
+    text-transform: uppercase;
+
+    @include mq(md) {
+      padding-right: rem(10);
+      padding-left: rem(10);
+    }
+
+    &.is--turbo {
+      color: $turbo;
+    }
+
+    &.is--tulip {
+      color: $tulip-tree;
+    }
+
+  }
+
+  .el-form__label {
+    // color: inherit;
+    font-size: em(15);
+  }
+}

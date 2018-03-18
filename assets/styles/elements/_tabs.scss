@@ -1,0 +1,105 @@
+.el-tabs {
+  position: relative;
+  width: 100%;
+  background: #dfdfdf;
+  color: $blue-whale;
+
+  &--blue {
+    background: $bondi-blue;
+    color: #fff;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-right: rem(-15);
+    margin-left: rem(-15);
+    padding: 0;
+    list-style: none;
+    text-align: center;
+
+    @include mq(xs) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    text-align: center;
+
+    &--hint {
+      @include mq(sm) {
+        display: none;
+      }
+    }
+  }
+
+  &__btn {
+    display: none;
+    padding: rem(12) rem(40);
+    color: inherit;
+    font-family: $font-amatic;
+    font-size: em(22, 10);
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+
+    .is--open &,
+    &.active {
+      display: block;
+    }
+
+    @include mq(sm) {
+      display: block;
+      padding-top: rem(14);
+      padding-bottom: rem(14);
+      font-size: em(26, 10);
+      line-height: 1;
+      &.active {
+        display: block;
+        box-shadow: inset 0 rem(-7) currentColor;
+      }
+    }
+
+    &--large {
+
+
+      @include mq(sm) {
+        padding-top: rem(22);
+        padding-bottom: rem(22);
+        font-size: em(32, 10);
+      }
+    }
+
+    &:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  &__toggle {
+    display: block;
+    position: absolute;
+    top: rem(11.5);
+    right: rem(13);
+    width: rem(25);
+    height: rem(25);
+    color: #042838;
+
+
+    // &:before {
+    //   content: "";
+    //   display: block;
+    //   position: absolute;
+    //   top: rem(-12);
+    //   right: rem(-10);
+    //   width: 100vw;
+    //   height: rem(48);
+    // }
+
+    @include mq(sm) {
+      display: none;
+    }
+  }
+}

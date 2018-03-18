@@ -1,0 +1,138 @@
+.cp-menu {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+
+  &__toggle {
+    @include appearance(none);
+    background: transparent;
+    border: 0;
+
+    svg {
+      width: rem(37);
+      height: rem(26);
+      color: $bondi-blue;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: rem(15);
+    padding-bottom: rem(15);
+  }
+
+  &__toggle {
+    display: block;
+
+    @include mq(sm) {
+      display: none;
+    }
+  }
+
+  &__brand {
+    display: block;
+    width: rem(97);
+    height: rem(32);
+
+    @include mq(sm) {
+      width: rem(181);
+      height: rem(65);
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    background: $keppel;
+    top: rem(72);
+    left: 0;
+    width: 100%;
+    transform: translateY(-100vh);
+    transition: transform .2s;
+
+    .has-nav & {
+      transform: translateY(0);
+    }
+
+    @include mq(sm) {
+      position: static;
+      width: auto;
+      background: transparent;
+      transform: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    list-style: none;
+    margin-top: rem(12);
+
+    @include mq(sm) {
+      flex-direction: row;
+      margin-left: rem(-12);
+      margin-right: rem(-12);
+    }
+  }
+
+  &__item {
+    font-size: em(13, 10);
+    font-family: $font-unisans;
+    font-weight: 900;
+    padding: rem(16) rem(30);
+    text-transform: uppercase;
+    color: #fff;
+
+    &.is--blue:hover,
+    &.is--blue.is--active {
+      color: $denim;
+    }
+
+    &.is--cyan:hover,
+    &.is--cyan.is--active {
+      color: $bondi-blue;
+    }
+
+    &.is--pink:hover,
+    &.is--pink.is--active {
+      color: $amaranth;
+    }
+
+    &.is--green:hover,
+    &.is--green.is--active {
+      color: $sushi;
+    }
+
+    &.is--purple:hover,
+    &.is--purple.is--active {
+      color: $siren;
+    }
+
+    &.is--orange:hover,
+    &.is--orange.is--active {
+      color: $ecstasy;
+    }
+
+    &.is--active {
+      @include mq(sm) {
+        box-shadow: 0 4px 0 0 currentColor;
+      }
+    }
+
+
+    @include mq(sm) {
+      padding: 0 rem(12);
+      color: $blue-whale;
+    }
+
+    a {
+      color: inherit;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.agenda-weekdays {
+  position: relative;
+  background: $sushi;
+  color: $blue-whale;
+  z-index: 2;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: rem(6) 0;
+    list-style: none;
+
+    @include mq(sm) { padding: rem(10) 0; }
+    @include mq(lg) { padding: rem(20) 0; }
+  }
+
+  &__item {
+    flex: 1 0 14.285714285714286%;
+    max-width: 14.285714285714286%;
+    font-family: $font-opensans;
+    font-size: 0;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include mq(sm) {
+      font-size: em(14);
+    }
+
+    span {
+      font-size: rem(14);
+    }
+  }
+}

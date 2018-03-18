@@ -1,0 +1,66 @@
+.generator-aside {
+  max-width: 100%;
+  padding: rem(8);
+
+  @include mq(lg) {
+    flex-basis: rem(308);
+  }
+
+  &__container {
+    @include mq(lg) {
+      max-width: rem(280);
+    }
+  }
+
+  &__list {
+    display: flex;
+    margin-right: rem(-8);
+    margin-left: rem(-8);
+    @include mq(lg) {
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    color: #042838;
+    font-family: "Open Sans", sans-serif;
+    font-size: em(14);
+    line-height: 1.571;
+  }
+
+  &__btn {
+    @include appearance(none);
+    position: absolute;
+    top: 50%;
+    margin: 0;
+    transform: translateY(-50%);
+    border: 0;
+    background: transparent;
+    color: $prussian-blue;
+    cursor: pointer;
+    z-index: 2;
+    pointer-events: auto;
+
+    @include mq(sm) {
+      margin: 0 rem(20);
+    }
+
+    svg {
+      width: 9.5px;
+      height: 17px;
+
+      @include mq(sm) {
+        width: 19px;
+        height: 34px;
+      }
+    }
+
+    &--prev {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
+    }
+  }
+}

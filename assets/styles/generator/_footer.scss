@@ -1,0 +1,35 @@
+.generator-footer {
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-left: auto;
+
+    @include mq(lg) {
+      width: calc(100% - #{rem(308)});
+    }
+  }
+
+  &__btn {
+    max-width: rem(192);
+    white-space: nowrap;
+
+    .el-button__icon {
+      flex: 0 0 rem(22);
+    }
+  }
+
+  &__item {
+    // flex-grow: 1;
+
+    small {
+      display: block;
+      margin-top: rem(10);
+      color: #042838;
+      font-family: $font-opensans;
+      font-size: em(12);
+      letter-spacing: .05em;
+      line-height: 2;
+    }
+  }
+}

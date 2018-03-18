@@ -1,0 +1,29 @@
+.el-loadmore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: rem(16);
+  margin-bottom: rem(16);
+
+  &__btn {
+    padding: rem(11) rem(19);
+    border-radius: rem(5);
+    background: $bondi-blue;
+    color: #fff;
+    font-family: $font-opensans;
+    font-size: em(22);
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 1.27273;
+    text-align: center;
+    text-transform: uppercase;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+      animation-name: tada;
+    }
+  }
+}

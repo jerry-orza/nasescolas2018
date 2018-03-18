@@ -1,0 +1,98 @@
+.el-header {
+  padding-bottom: rem(30);
+
+  @include mq(sm) {
+    padding-top: rem(44);
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: rem(1070);
+
+    @include mq(xs) {
+      flex-wrap: wrap;
+    }
+  }
+
+
+  &__title {
+    width: 100%;
+    margin: 0;
+    color: $blue-whale;
+    font-family: $font-amatic;
+    font-size: em(32, 10);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    text-transform: uppercase;
+
+    @include mq(sm) {
+      font-size: em(44, 10);
+    }
+  }
+
+  &__text {
+    margin-top: rem(15);
+    color: $blue-whale;
+    font-family: $font-opensans;
+    font-size: 14px;
+    line-height: 1.571;
+  }
+
+  &__icon {
+    width: rem(76);
+    // height: rem(64);
+    margin-right: rem(20);
+    flex-shrink: 0;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @include mq(xs) {
+      align-self: flex-start;
+      width: rem(38);
+      margin-right: rem(10);
+    }
+  }
+
+  &__pubdate,
+  &__credit {
+    display: block;
+    font-family: $font-opensans;
+    font-size: em(12);
+    letter-spacing: .05em;
+    line-height: 1.666667;
+  }
+
+  &__author {
+    font-weight: 700;
+  }
+
+  &__headline {
+    flex-basis: calc(100% - #{rem(48)});
+    @include mq(sm) {
+      flex-basis: auto;
+    }
+  }
+
+  &__aside {
+    display: flex;
+    align-content: flex-end;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include mq(xs) {
+      order: -1;
+      width: 100%;
+      margin-bottom: rem(10);
+    }
+
+    @include mq(sm) {
+      margin-left: auto;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.tutorial-panel {
+  padding: rem(15);
+
+  &--small {
+    max-width: rem(280);
+  }
+
+  &__headline {
+    display: block;
+    margin-bottom: rem(30);
+    color: #fff;
+    font-family: $font-opensans;
+    font-size: em(18);
+    letter-spacing: .05em;
+    line-height: 1.22222;
+    text-align: left;
+
+    strong {
+      color: #fdba13;
+      font-weight: bold;
+    }
+  }
+}

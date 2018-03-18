@@ -1,0 +1,53 @@
+.generator-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: rem(8) rem(40);
+  cursor: pointer;
+
+  @include mq(sm) {
+    padding: rem(8) rem(20);
+  }
+
+  @include mq(lg) {
+    padding: rem(8);
+    + #{&} {
+      border-top: 4px dotted #c99513;
+    }
+  }
+
+  &__thumbnail {
+    position: relative;
+    flex-basis: rem(115);
+    border-radius: 4px;
+    background: #000;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      transition: opacity .4s;
+      opacity: .5;
+    }
+  }
+
+  &.is--checked,
+  &:hover {
+    img {
+      opacity: 1;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: rem(24);
+    color: #042838;
+    font-family: $font-opensans;
+    font-size: em(14);
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 1.60333;
+    text-transform: uppercase;
+  }
+}

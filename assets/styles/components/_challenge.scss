@@ -1,0 +1,23 @@
+.challenge-main {
+  width: 100%;
+}
+
+.challenge-header {
+  position: relative;
+  overflow: hidden;
+}
+
+@import '../challenge/carousel';
+@import '../challenge/info';
+@import '../challenge/infobox';
+@import '../challenge/tabs';
+@import '../challenge/article';
+@import '../challenge/body';
+@import '../challenge/video';
+@import '../challenge/gallery';
+@import '../challenge/faq';
+@import '../challenge/download';
+@import '../challenge/form';
+@import '../challenge/dots';
+@import '../challenge/status';
+@import '../challenge/hint';

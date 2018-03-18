@@ -1,0 +1,42 @@
+.home-buttons {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  pointer-events: none;
+
+  &__container {
+    position: relative;
+    margin: 0 auto;
+    height: 100%;
+    max-width: 1200px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &__btn {
+    @include appearance(none);
+    color: $prussian-blue;
+    border: 0;
+    background: transparent;
+    position: absolute;
+    bottom: 62px;
+    pointer-events: auto;
+    cursor: pointer;
+
+    svg {
+      width: 18px;
+      height: 28px;
+    }
+
+    &--prev {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+html,
+body {
+  font-family: $font-opensans;
+  font-size: 10px;
+}
+
+.has-nav {
+  overflow: hidden;
+}
+
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+  // overflow-x: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: rem(1200);
+  margin: 0 auto;
+  padding-right: rem(15);
+  padding-left: rem(15);
+
+  &--small {
+    max-width: rem(1024);
+  }
+}
+
+.la-top {
+  position: relative;
+  z-index: 1050;
+}
+
+.la-content {
+  display: flex;
+  flex-flow: column nowrap;
+  flex-grow: 1;
+  background: #fff;
+
+  &--transparent {
+    background: transparent;
+  }
+  // padding-bottom: rem(90);
+}
+
+.la-container {
+  flex-grow: 1;
+  padding-bottom: rem(90);
+
+  @include mq(sm) {
+    padding-bottom: rem(150);
+  }
+}
+
+.la-main {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - #{rem(42)});
+  padding-top: rem(62);
+  background-image: linear-gradient(to right, #fdba13 0%, #fdd061 100%);
+
+  @include mq(sm) {
+    padding-top: rem(90);
+  }
+
+  .is--home & {
+    padding-top: 0;
+  }
+}
+
+.la-text {
+  @include clearfix;
+
+  > * {
+    margin-top: 0;
+    margin-bottom: 1em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  aside {
+    margin: 0 2em;
+    font-size: 1rem;
+  }
+}

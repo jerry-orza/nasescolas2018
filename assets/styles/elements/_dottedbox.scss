@@ -1,0 +1,44 @@
+.el-dottedbox {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  max-width: rem(1030);
+  min-height: rem(240);
+  margin: rem(24) auto;
+  border: 3px dashed currentColor;
+  border-radius: rem(9);
+  color: $blue-whale;
+
+  &--blue {
+    color: $bondi-blue;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: rem(830);
+    padding: rem(24);
+  }
+
+  &__message {
+    flex: 1 1 calc(100% - #{rem(242)});
+    padding-right: rem(24);
+
+    font-family: $font-amatic;
+    font-size: em(40);
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 1.425;
+  }
+
+  &__btn {
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-top: rem(24);
+    margin-bottom: rem(24);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,107 @@
+.notification {
+  display: none;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  padding: rem(15);
+  // transition: top .5s, opacity .1s;
+  // font-size: rem(14);
+  // opacity: 0;
+  transition: opacity .4s;
+  z-index: 1090;
+
+  &.is--alerting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    transition: opacity .4s;
+    background: rgba(0, 0, 0, .5);
+    opacity: 0;
+    z-index: -1;
+
+    .is--alerting & {
+      opacity: 1;
+    }
+  }
+
+  &__popup {
+    display: block;
+    padding: rem(60);
+    border: rem(1) solid transparent;
+    border-radius: rem(12);
+    background: #fff;
+    font-family: $font-opensans;
+    font-size: em(25);
+    font-weight: 700;
+    text-align: center;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: .2s;
+
+    .is--alerting & {
+      animation-name: bounceIn;
+    }
+  }
+
+  &__message {
+    max-width: rem(400);
+    margin: 0 auto;
+    transition: opacity .4s;
+    transition-delay: .2s;
+    opacity: 0;
+
+    .is--alerting & {
+      opacity: 1;
+    }
+  }
+
+  &__figure {
+    max-width: rem(153);
+    margin: 0 auto rem(30);
+    animation-duration: 1.2s;
+    animation-fill-mode: both;
+    animation-delay: .3s;
+
+    .notification--error.is--alerting & {
+      animation-name: wobble;
+    }
+
+    .notification--success.is--alerting & {
+      animation-name: swing;
+    }
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  // &--success {
+  //   color: #3c763d;
+  //   background-color: #dff0d8;
+  //   border-color: #d6e9c6;
+  // }
+
+  // &--info {
+  //   color: #31708f;
+  //   background-color: #d9edf7;
+  //   border-color: #bce8f1;
+  // }
+
+  // &--warning {
+  //   color: #8a6d3b;
+  //   background-color: #fcf8e3;
+  //   border-color: #faebcc;
+  // }
+
+  // &--danger,
+  // &--error {
+  //   color: #a94442;
+  //   background-color: #f2dede;
+  //   border-color: #ebccd1;
+  // }
+}

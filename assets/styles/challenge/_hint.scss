@@ -1,0 +1,73 @@
+.challenge-hint {
+  display: none;
+  @include mq(sm) {
+    display: block;
+    position: absolute;
+    bottom: rem(7);
+    left: 100%;
+    width: 75vw;
+    max-width: rem(576);
+    transform: translateX(0);
+    transition: transform .5s;
+    // overflow: hidden;
+
+    .has--hint & {
+      transform: translateX(-100%);
+
+      &:before {
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        background: red;
+        content: "";
+      }
+    }
+  }
+
+  &__tab {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  &__eficencio {
+    position: relative;
+    top: rem(8);
+    left: rem(12);
+  }
+
+  &__container {
+    display: flex;
+    align-items: stretch;
+  }
+
+  &__button {
+    @include appearance(none);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border: 0;
+    background: #0078ad;
+    color: #fff;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  &__hint {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: rem(28);
+    background: $sushi;
+    color: #fff;
+    font-family: $font-opensans;
+    font-size: em(15);
+    font-weight: 300;
+  }
+}

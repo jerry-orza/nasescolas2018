@@ -1,0 +1,20 @@
+.generator {
+  margin-right: rem(-8);
+  margin-left: rem(-8);
+
+  @include mq(lg) {
+    display: flex;
+    align-items: stretch;
+  }
+
+}
+
+@import '../generator/box';
+@import '../generator/post';
+@import '../generator/container';
+@import '../generator/aside';
+@import '../generator/button';
+@import '../generator/checkbox';
+@import '../generator/footer';
+@import '../generator/textarea';
+@import '../generator/modal';

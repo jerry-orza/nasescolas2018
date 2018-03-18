@@ -1,0 +1,262 @@
+.cp-eficencio {
+  position: relative;
+  bottom: rem(100);
+  width: 100%;
+  max-width: rem(1200);
+  height: 300px;
+  margin: auto;
+  overflow: hidden;
+  z-index: 1050;
+  pointer-events: none;
+
+  &__wrapper {
+    position: absolute;
+    right: rem(40);
+    bottom: rem(-20);
+    height: inherit;
+    transform: scale(0.8);
+
+    @include mq(sm) {
+      bottom: rem(40);
+      transform: none;
+    }
+
+    @include mq(md) {
+      right: rem(120);
+    }
+  }
+
+  &__shadow {
+    @include mq(sm) {
+      position: absolute;
+      right: rem(-33.5);
+      bottom: rem(-33.5);
+      width: rem(134);
+      height: rem(30);
+      background-image: url(../images/eficencio/shadow.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      animation-duration: 12s;
+      animation-name: shadow;
+    }
+  }
+
+  &__container {
+    position: absolute;
+    right: 0; bottom: 0;
+    width: rem(60);
+    height: rem(116.448);
+    z-index: 2;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 12s;
+    animation-name: float;
+  }
+
+  &__body {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-image: url(../images/eficencio/corpo.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 7;
+  }
+
+  &__wires {
+    position: absolute;
+    bottom: rem(17.5);
+    left: rem(-5);
+    width: rem(74);
+    height: rem(44);
+    background-image: url(../images/eficencio/cabos.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 9;
+  }
+
+  &__arms {
+    position: absolute;
+    top: rem(-27.5);
+    left: calc(50% - #{rem(94.45)});
+    width: rem(196.9);
+    height: rem(106.85017064846417);
+    background-image: url(../images/eficencio/2/2d.png);
+    background-repeat: no-repeat;
+    background-size: 500% 100%;
+    z-index: 6;
+    animation-duration: 6s;
+    animation-fill-mode: both;
+    animation-timing-function: steps(4, end);
+    animation-iteration-count: infinite;
+    animation-name: arms;
+  }
+
+  &__head {
+    position: absolute;
+    bottom: 100%;
+    left: rem(-13.90243902439024);
+    width: rem(87.80487804878048);
+    height: rem(49.54703832752613);
+    background-image: url(../images/eficencio/1/cabeca.png);
+    background-repeat: no-repeat;
+    background-size: 300% 100%;
+    z-index: 8;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: steps(2, end);
+    animation-iteration-count: infinite;
+    animation-name: head;
+  }
+
+  &__halo {
+    position: absolute;
+    top: -100%;
+    left: rem(-90);
+    width: rem(240);
+    height: rem(173.02325581395348);
+    background-image: url(../images/eficencio/brilho-cabeca.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 1;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-name: halo;
+    pointer-events: none;
+    // background-color: red;
+  }
+
+  &__monitor {
+    position: absolute;
+    top: rem(22);
+    left: rem(12);
+    width: rem(37);
+    height: rem(30);
+    background-image: url(../images/eficencio/raios-sprite.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 700% 200%;
+    z-index: 11;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-timing-function: steps(6, end);
+    animation-iteration-count: infinite;
+    animation-name: head;
+
+    // 2814 x 652
+    // 402 x 326
+  }
+
+  &__smoke {
+    @include mq(sm) {
+      position: absolute;
+      bottom: rem(-30);
+      left: rem(5);
+      width: rem(50);
+      height: rem(78.06041335453101);
+      background-image: url(../images/eficencio/brilho-cabeca.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      animation-iteration-count: infinite;
+      animation-duration: 1s;
+      animation-name: smoke;
+    }
+  }
+}
+
+@keyframes shadow {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(#{rem(-20)});
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes head {
+  0% {
+    background-position: 0% 0;
+  }
+
+  40% {
+    background-position: 100% 0;
+  }
+
+  60% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: 0% 0;
+  }
+}
+
+@keyframes arms {
+  0% {
+    background-position: 0% 0;
+  }
+
+  40% {
+    background-position: 100% 0;
+  }
+
+  60% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: 0% 0;
+  }
+}
+
+@keyframes halo {
+  0% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: .25;
+  }
+
+  60% {
+    opacity: .25;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes smoke {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .72;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

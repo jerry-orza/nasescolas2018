@@ -1,0 +1,65 @@
+.cp-footer {
+  background: $bondi-blue;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__text {
+    display: block;
+    padding: rem(24) rem(10);
+    color: #fff;
+    width: calc(100% - 100px);
+    line-height: 18px;
+    letter-spacing: .025em;
+    font-size: em(13, 10);
+
+    strong {
+      text-transform: uppercase;
+      font-size: em(16, 10);
+    }
+
+    @include mq(sm) {
+      display: none;
+    }
+  }
+
+  &__nav {
+    display: none;
+    flex: 0 1 rem(735);
+    @include mq(sm) {
+      display: block;
+    }
+    @include mq(md) {
+      padding-left: rem(72);
+      padding-right: rem(72);
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    align-items: center;
+
+    a {
+      display: block;
+      padding-top: rem(32);
+      padding-bottom: rem(32);
+      color: #fff;
+      font-family: $font-unisans;
+      font-weight: 900;
+      font-size: em(13, 10);
+    }
+  }
+
+  &__eficencio {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

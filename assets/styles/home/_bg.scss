@@ -1,0 +1,35 @@
+.home-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+
+  &__yellow,
+  &__salmon {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__yellow {
+    background-image: linear-gradient(to right, $lightning-yellow 0%, $goldenrod 100%);
+  }
+
+  &__salmon {
+    background-image: linear-gradient(to right, $manhattan 0%, $sandy-brown 100%);
+  }
+
+  .slick-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .slick-track {
+    height: 100%;
+  }
+}

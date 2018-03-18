@@ -1,0 +1,47 @@
+.dashboard-header {
+  font-size: em(11);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+
+  @include mq(sm) {
+    font-size: em(18);
+  }
+
+  &__title {
+    flex-grow: 1;
+    padding-left: rem(8);
+    max-width: rem(270);
+
+    @include mq(sm) {
+      padding: 0 rem(20);
+    }
+  }
+
+  &__icon {
+    display: block;
+    flex-shrink: 0;
+
+    &:last-child {
+      margin: auto;
+    }
+
+    @include mq(xs) {
+      width: rem(38);
+      height: rem(38);
+
+      &:last-child,
+      .dashboard-container & {
+        width: auto;
+        height: auto;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

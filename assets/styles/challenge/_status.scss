@@ -1,0 +1,132 @@
+.challenge-status {
+  border: 3px solid transparent;
+
+  &.is--blue {
+    border-color: #0e5485;
+    background: #14649d;
+  }
+
+  &__title {
+    padding-top: rem(12);
+    padding-bottom: rem(12);
+    font-family: $font-amatic;
+    font-size: em(30);
+    line-height: 1;
+    text-align: center;
+
+    .challenge-status.is--blue & {
+      background: #0e5485;
+    }
+  }
+
+  &__body {
+    padding: rem(18) rem(20) rem(32);
+    text-align: center;
+
+    @include mq(sm) {
+      padding: rem(20) rem(12) rem(45);
+    }
+  }
+
+  &__container {
+    max-height: rem(212);
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    list-style: none;
+    text-align: left;
+    overflow: auto;
+
+    &::-webkit-scrollbar-track {
+      border-radius: 14px;
+      background-color: #F1F1F1;
+
+      .challenge-status.is--blue & {
+        background-color: #0e5485;
+      }
+    }
+
+    &::-webkit-scrollbar {
+      width: 14px;
+      border-radius: 7px;
+      background-color: #F1F1F1;
+
+      .challenge-status.is--blue & {
+        background-color: #0e5485;
+      }
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 7px;
+      background-color: #C2C2C2;
+
+      .challenge-status.is--blue & {
+        background-color: #01bef0;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    + #{&} {
+      @include mq(sm) {
+        margin-top: rem(24);
+      }
+    }
+
+    .challenge-status__body & {
+      font-size: 1rem;
+    }
+  }
+
+  &__col {
+    flex: 1 0 50%;
+    padding-right: rem(12);
+    padding-left: rem(0);
+
+    @include mq(sm) {
+      padding-right: rem(30);
+      padding-left: rem(30);
+    }
+  }
+
+  &__status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: rem(33);
+    margin-top: rem(12);
+    margin-bottom: rem(12);
+    background: #fff;
+
+    .challenge-status.is--blue & {
+      color: #0e5485;
+    }
+  }
+
+  &__text,
+  &__subtext {
+    font-size: em(15);
+    line-height: 1.466666;
+  }
+
+  &__text {
+    font-weight: bold;
+  }
+
+  &__icon {
+    margin-right: rem(15);
+  }
+
+  &__label {
+    font-family: $font-amatic;
+    font-size: em(22);
+    font-weight: bold;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+}

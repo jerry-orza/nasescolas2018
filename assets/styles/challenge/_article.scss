@@ -1,0 +1,87 @@
+.challenge-article {
+  @include clearfix;
+  background-repeat: no-repeat;
+  background-size: 0 0;
+  background-position: 0 0;
+  min-height: 100vh;
+  background-attachment: fixed;
+
+  &__content {
+    min-height: inherit;
+    padding: rem(24) rem(20) rem(80);
+    color: #fff;
+    overflow: hidden;
+
+    @include mq(md) {
+      float: left;
+      width: 50%;
+      padding: rem(40) rem(75) rem(90);
+    }
+
+    &.is--violet {
+      background: $vivid-violet; // Desafio 01
+    }
+
+    &.is--matisse {
+      background: $matisse; // Desafio 02
+    }
+
+    &.is--eminence {
+      background: $eminence; // Desafio 03
+    }
+
+    &.is--denim {
+      background: $denim; // Desafio 04
+    }
+
+    &.is--mantis {
+      background: $mantis; // Desafio 05
+      color: $parsley;
+    }
+
+    &.is--cucumber {
+      background: $chelsea-cucumber; // Desafio 06
+    }
+
+    &.is--pink {
+      background: $red-violet; // Desafio 07
+    }
+
+    &.is--purple {
+      background: $purple-heart; // Desafio 08
+    }
+
+    &.is--green {
+      background: $jungle-green; // Desafio 09
+    }
+  }
+
+  &__sticky {
+    display: none;
+    width: 50%;
+    min-height: inherit;
+    float: left;
+    position: sticky;
+    top: rem(66);
+
+    @include mq(md) {
+      display: block;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    opacity: 0;
+    transition: opacity 1s;
+
+    &.is--active {
+      opacity: 1;
+    }
+  }
+}

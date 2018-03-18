@@ -1,0 +1,60 @@
+.el-breadcrumbs {
+  @include clearfix;
+  display: block;
+  width: 100%;
+  padding-top: rem(18);
+  padding-bottom: rem(27);
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    float: left;
+    border-bottom: 1px solid #b3bec3;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-top: rem(5);
+    margin-bottom: rem(5);
+    line-height: 1;
+
+    + #{&} {
+      &:before {
+        display: block;
+        padding-right: .5rem;
+        padding-left: .5rem;
+        content: ">";
+      }
+    }
+
+    &:first-child {
+      .el-breadcrumbs__link {
+        text-decoration: underline;
+      }
+    }
+
+    &:last-child {
+      font-weight: 700;
+    }
+  }
+
+  &__link {
+    display: block;
+    color: $prussian-blue;
+    font-size: em(12, 10);
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+
+    &:hover {
+      color: $bondi-blue;
+      text-decoration: none;
+      animation-name: tada;
+    }
+  }
+}

@@ -1,0 +1,188 @@
+.challenge-gallery {
+  border: 0px solid currentColor;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  &.is--cyan {
+    border-color: $bondi-blue;
+    background-image: url(../images/bordas/bondi-blue.png);
+  }
+
+  &.is--sienna {
+    border-color: $burnt-sienna;
+    background-image: url(../images/bordas/burnt-sienna.png);
+  }
+
+  &.is--sunflower {
+    border-color: $sunflower;
+    background-image: url(../images/bordas/sunflower.png);
+  }
+
+  &.is--green {
+    border-color: $parsley;
+    background-image: url(../images/bordas/parsley.png);
+  }
+
+  &.is--white {
+    border-color: #fff;
+    background-image: url(../images/bordas/white.png);
+  }
+
+  &__slider {
+    .slick-track {
+      display: flex;
+
+      .slick-slide {
+        display: flex;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__header {
+    position: absolute;
+    top: -2em;
+    left: 0;
+    text-align: center;
+
+    .slick-track .slick-slide {
+      border: 0;
+    }
+  }
+
+  &__title {
+    position: relative;
+    display: inline-block;
+    padding: .5em 1em;
+    font-size: em(35);
+    line-height: 1;
+    white-space: nowrap;
+    font-family: $font-amatic;
+    font-weight: 700;
+
+    &.is--blue {
+      color: $tory-blue;
+    }
+
+    &.is--gray {
+      color: $scorpion;
+    }
+
+    &.is--turbo {
+      color: $turbo;
+    }
+
+    &.is--tulip {
+      color: $tulip-tree;
+    }
+
+    &.is--green {
+      color: $pastel-green;
+    }
+  }
+
+  &__subtitle {
+    font-family: $font-amatic;
+    font-weight: 700;
+    line-height: 1;
+    font-size: em(30);
+  }
+
+  &__item {
+    padding: rem(32);
+  }
+
+  &__btn {
+    @include appearance(none);
+    border: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 105;
+    padding: .5em .5em .2em;
+    color: #fff;
+
+    svg {
+      width: rem(23);
+      height: rem(34);
+      fill: currentColor;
+    }
+
+    &--prev {
+      left: rem(-24);
+    }
+
+    &--next {
+      right: rem(-24);
+    }
+
+    &.is--green,
+    &.is--sushi {
+      color: $sushi;
+    }
+
+    &.is--blue,
+    &.is--tory {
+      color: $tory-blue;
+    }
+
+    &.is--gray {
+      color: $scorpion;
+    }
+
+    &.is--yellow,
+    &.is--tulip {
+      color: $tulip-tree;
+    }
+
+    &.is--purple,
+    &.is--heliotrope {
+      color: $heliotrope;
+    }
+  }
+
+  &__title,
+  &__btn {
+    .challenge-article__content.is--violet & {
+      background: $vivid-violet; // Desafio 01
+    }
+
+    .challenge-article__content.is--matisse & {
+      background: $matisse; // Desafio 02
+    }
+
+    .challenge-article__content.is--eminence & {
+      background: $eminence; // Desafio 03
+    }
+
+    .challenge-article__content.is--denim & {
+      background: $denim; // Desafio 04
+    }
+
+    .challenge-article__content.is--mantis & {
+      background: $mantis; // Desafio 05
+      color: $parsley;
+    }
+
+    .challenge-article__content.is--cucumber & {
+      background: $chelsea-cucumber; // Desafio 06
+    }
+
+    .challenge-article__content.is--pink & {
+      background: $red-violet; // Desafio 07
+    }
+
+    .challenge-article__content.is--purple & {
+      background: $purple-heart; // Desafio 08
+    }
+
+    .challenge-article__content.is--green & {
+      background: $jungle-green; // Desafio 09
+    }
+  }
+}

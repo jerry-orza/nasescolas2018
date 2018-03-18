@@ -1,0 +1,23 @@
+.agenda {
+  position: relative;
+  flex-grow: 1;
+  width: 100%;
+  background: $bondi-blue;
+
+  &__wrapper {
+    max-width: rem(975);
+    margin: 0 auto;
+    padding: rem(56) rem(15);
+  }
+
+  &__container {
+
+  }
+}
+
+@import '../agenda/top';
+@import '../agenda/slider';
+@import '../agenda/weekdays';
+@import '../agenda/calendar';
+@import '../agenda/events';
+@import '../agenda/modal';

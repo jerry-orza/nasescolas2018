@@ -1,0 +1,26 @@
+.tutorial-button {
+  @include appearance(none);
+  flex: 1 1 auto;
+  margin: rem(5);
+  padding: rem(5) rem(10);
+  border: 3px solid #fdba13;
+  border-radius: rem(9);
+  background: transparent;
+  color: #fdba13;
+  font-family: $font-opensans;
+  font-size: em(9);
+  font-weight: 700;
+  letter-spacing: .05em;
+  line-height: 1.33333;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &--large {
+    flex: 1 1 100%;
+    padding: rem(10) rem(12);
+    background: #fdba13;
+    color: #042838;
+    font-size: em(14);
+  }
+}

@@ -1,0 +1,41 @@
+.challenge-info {
+  display: flex;
+  align-items: center;
+  padding-top: rem(5);
+  padding-bottom: rem(5);
+
+  &__info {
+    font-family: $font-opensans;
+    font-size: em(14, 10);
+    line-height: em(25, 14);
+    letter-spacing: .05em;
+    color: $prussian-blue;
+  }
+
+  &__icon {
+    margin-right: rem(10);
+    flex: 0 0 rem(50);
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.4;
+  }
+
+  &__score {
+    font-size: em(18, 14);
+    line-height: em(24, 18);
+
+    strong {
+      font-weight: 700;
+      font-size: em(25, 18);
+      line-height: em(24, 25);
+    }
+  }
+}

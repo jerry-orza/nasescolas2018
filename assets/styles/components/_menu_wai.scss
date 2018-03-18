@@ -1,0 +1,131 @@
+.cp-menu_wai {
+  background: $lochinvar;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  transform: translateY(-100vh);
+  transition: transform .2s;
+
+  .has-nav & {
+    transform: translateY(0);
+  }
+
+  @include mq(sm) {
+    background: #fff;
+    position: static;
+    width: auto;
+    transform: none;
+  }
+
+  &__close {
+    @include appearance(none);
+    background: transparent;
+    border: 0;
+    color: #fff;
+    margin-right: rem(20);
+
+    @include mq(sm) {
+      display: none;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: rem(10);
+    padding-bottom: rem(10);
+    font-size: em(11, 10);
+    letter-spacing: 0.05em;
+    font-family: $font-opensans;
+
+    @include mq(sm) {
+      padding-top: rem(8);
+      padding-bottom: rem(8);
+    }
+  }
+
+  &__shortcuts {
+    display: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    color: $blue-whale;
+
+    @include mq(sm) {
+      display: flex;
+    }
+
+
+    li {
+      + li {
+        padding-left: rem(16);
+      }
+    }
+
+    a {
+      display: flex;
+      color: inherit;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    margin-right: .5rem;
+    flex-shrink: 0;
+
+    svg {
+      min-width: 0;
+      height: 18px;
+      margin: auto;
+
+      @include mq(sm) {
+        height: 13px;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: flex-end;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    overflow: hidden;
+
+    @include mq(sm) {
+      flex-grow: 0;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    a {
+      display: flex;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      color: #fff;
+      padding-top: rem(5);
+      padding-bottom: rem(5);
+      overflow: hidden;
+      max-width: 100%;
+
+      span {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        min-width: 0;
+      }
+
+      @include mq(sm) {
+        color: $bondi-blue;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+}
+

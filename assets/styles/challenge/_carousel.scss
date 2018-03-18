@@ -1,0 +1,69 @@
+.challenge-carousel {
+  position: relative;
+  margin-left: rem(-10);
+  margin-right: rem(-10);
+
+  &__container {
+    white-space: nowrap;
+    overflow: auto;
+    @include mq(md) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    // font-size: 0;
+    white-space: normal;
+    position: relative;
+    flex-shrink: 1;
+    width: 25%;
+    flex-basis: rem(92);
+    overflow: hidden;
+
+    @include mq(md) {
+      margin: rem(10);
+      min-width: rem(92);
+    }
+  }
+
+  &__btn {
+    @include appearance(none);
+    color: $prussian-blue;
+    border: 0;
+    background: rgba(#fff, .5);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: rem(12);
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 105;
+
+    @include mq(sm) {
+      margin-top: rem(24);
+    }
+
+    svg {
+      width: rem(18);
+      height: rem(28);
+    }
+
+    &--prev {
+      left: rem(-4);
+    }
+
+    &--next {
+      right: rem(-4);
+    }
+  }
+
+  .el-challenge__caption {
+    @include mq(xs) {
+      display: none;
+    }
+  }
+}

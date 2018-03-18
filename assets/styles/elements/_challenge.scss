@@ -1,0 +1,119 @@
+.el-challenge {
+  &__title {
+    display: block;
+    margin-bottom: 0;
+    text-align: center;
+    font-family: $font-amatic;
+    font-size: em(24, 10);
+    font-weight: 700;
+    line-height: 1;
+    color: $prussian-blue;
+
+    .is--faded & {
+      transition: color .2s;
+    }
+
+    .is--faded:not(:hover) & {
+      color: rgb(200, 200, 200);
+    }
+
+    @include mq(sm) {
+      margin-bottom: rem(24);
+    }
+
+
+    span {
+      display: block;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+    }
+
+    &:hover span {
+      animation-name: tada;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      z-index: 2;
+    }
+  }
+
+
+  &__figure {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 1rem;
+
+    @include mq(sm) {
+      border-radius: 50%;
+      width: rem(122);
+      // height: 124px;
+      max-width: 100%;
+      height: auto;
+      padding: 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+
+      .is--faded & {
+        transition: filter .4s, opacity .4s;
+      }
+
+      .is--faded:not(:hover) & {
+        filter: grayscale(100%);
+        opacity: .6;
+      }
+    }
+  }
+
+  &__caption {
+    display: flex;
+    text-align: center;
+    font-size: em(12, 10);
+    line-height: 1.166667;
+    order: -1;
+    overflow: hidden;
+    margin-bottom: rem(12);
+    color: $prussian-blue;
+    height: 100%;
+    align-items: center;
+
+
+    @include mq(sm) {
+      position: absolute;
+      height: auto;
+      top: rem(4); right: rem(4); bottom: rem(4); left: rem(4);
+      margin-bottom: 0;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, .8);
+      color: #fff;
+      line-height: 1.33333;
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity .2s;
+
+      &--small {
+        padding: 1rem .5em;
+        font-size: em(9, 10);
+        letter-spacing: .01em;
+      }
+      .el-challenge__item:hover & {
+        opacity: 1;
+      }
+    }
+
+
+  }
+}
